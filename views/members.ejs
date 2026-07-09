@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Member Management</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin:0; background:#f7f9fc; color:#14213d; }
+      nav { background:#0f172a; color:#fff; padding:16px 24px; }
+      .container { padding:24px; }
+      .card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.06); }
+      table { width:100%; border-collapse:collapse; }
+      th, td { text-align:left; padding:10px; border-bottom:1px solid #e5e7eb; }
+      button { background:#0b6cff; color:#fff; border:none; padding:8px 12px; border-radius:8px; margin-right:8px; }
+    </style>
+  </head>
+  <body>
+    <nav><strong>SwiftWallet</strong> Member Management</nav>
+    <div class="container">
+      <div class="card">
+        <h2>Members</h2>
+        <button>Invite Member</button>
+        <table>
+          <tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Permissions</th></tr>
+          <% members.forEach((member) => { %>
+            <tr>
+              <td><%= member.name %></td>
+              <td><%= member.email %></td>
+              <td><%= member.role %></td>
+              <td><%= member.status %></td>
+              <td><%= member.permissions.join(', ') %></td>
+            </tr>
+          <% }) %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

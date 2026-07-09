@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SwiftWallet Registration</title>
+    <style>
+      body { font-family: Arial, sans-serif; background:#f3f6fb; margin:0; padding:40px; }
+      .card { max-width:640px; margin:0 auto; background:#fff; padding:30px; border-radius:12px; box-shadow:0 6px 24px rgba(0,0,0,0.08); }
+      input, select, textarea, button { width:100%; padding:12px; margin-top:10px; border-radius:8px; border:1px solid #cfd8e3; }
+      button { background:#0b6cff; color:#fff; border:none; cursor:pointer; }
+      .step { color:#64748b; margin-bottom:12px; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Merchant Registration</h2>
+      <div class="step">Step <%= step %> of 5</div>
+      <form method="post" action="/register">
+        <input name="businessName" placeholder="Business name" required />
+        <input name="email" placeholder="Email" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <input name="phone" placeholder="Phone" required />
+        <input name="address" placeholder="Business address" required />
+        <textarea name="notes" placeholder="Business description"></textarea>
+        <button type="submit">Continue</button>
+      </form>
+      <a href="/terms">View terms and conditions</a>
+    </div>
+  </body>
+</html>

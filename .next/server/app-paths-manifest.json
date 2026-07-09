@@ -1,0 +1,22 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/register/route": "app/api/auth/register/route.js",
+  "/api/checkout/route": "app/api/checkout/route.js",
+  "/api/profile/upload/route": "app/api/profile/upload/route.js",
+  "/api/swiftpay/callback/route": "app/api/swiftpay/callback/route.js",
+  "/api/swiftpay/collection/route": "app/api/swiftpay/collection/route.js",
+  "/api/swiftpay/disbursement/route": "app/api/swiftpay/disbursement/route.js",
+  "/api/swiftpay/qrph/route": "app/api/swiftpay/qrph/route.js",
+  "/api/swiftpay/return/route": "app/api/swiftpay/return/route.js",
+  "/api/swiftpay/payment-link/route": "app/api/swiftpay/payment-link/route.js",
+  "/api/transactions/route": "app/api/transactions/route.js",
+  "/api/swiftpay/webhook/route": "app/api/swiftpay/webhook/route.js",
+  "/api/webhooks/stripe/route": "app/api/webhooks/stripe/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/register/page": "app/register/page.js",
+  "/transactions/page": "app/transactions/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
+}

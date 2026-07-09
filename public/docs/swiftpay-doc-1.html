@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><script>
+(function(){var k='sat-theme';var m=document.cookie.match('(?:^|;)\\s*'+k+'=([^;]*)');var t=m?decodeURIComponent(m[1]):'';var p=t||localStorage.getItem('sat-darkmode-preference');var d=false;if(p==='dark'){d=true}else if(p==='system'||!p){var c=localStorage.getItem('sat-theme-resolved');if(c!==null){d=c==='dark'}else{d=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches}}if(t&&t!==localStorage.getItem('sat-darkmode-preference')){localStorage.setItem('sat-darkmode-preference',t);localStorage.setItem('sat-darkmode',String(d))}localStorage.setItem('sat-theme-resolved',d?'dark':'light');if(d){document.documentElement.classList.add('dark')}})();
+</script>
+<style>html.dark,html.dark body{background-color:#171717;color:#f5f5f5}</style>
+<script>/* auth hint — decides which nav state to show before first paint */(function(){try{var h=localStorage.getItem('sat_nav_hint');if(h===null)return;var r=document.documentElement;r.setAttribute('data-auth-hint',h?'user':'guest');if(h){var p=h.split('|');r.setAttribute('data-auth-initial',p[0]);if(p[1]==='p')r.setAttribute('data-auth-color','p')}}catch(e){}})()</script>
+<style>[data-auth-hint=user] [data-nav=skeleton],[data-auth-hint=guest] [data-nav=skeleton]{display:none!important}[data-auth-hint=user] [data-nav=user]{display:flex!important}[data-auth-hint=guest] [data-nav=guest]{display:flex!important}html[data-auth-hint=user] [data-nav-initial]{color:transparent}html[data-auth-hint=user] [data-nav-initial]::after{content:attr(data-i);color:#fff}[data-auth-color=p] [data-nav-initial]{background-image:none!important;background-color:#a855f7;background:linear-gradient(to bottom right,#a855f7,#9333ea)!important}</style>
+<script>
+    if (sessionStorage.getItem('PLAYWRIGHT') !== 'true') {
+        (window.requestIdleCallback || function(cb){setTimeout(cb, 200)})(function() {
+            var script = document.createElement("script");
+            script.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+            script.setAttribute('async', true);
+            document.head.appendChild(script);
+        });
+    }
+</script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://www.img2go.com/favicon.ico">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+        
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <link rel="preconnect" href="https://dragon.img2go.com" crossorigin>
+    <link rel="preconnect" href="https://stats.img2go.com" crossorigin>
+    <link rel="preconnect" href="https://moon.img2go.com" crossorigin>
+    <link rel="preconnect" href="https://firefly.img2go.com" crossorigin>
+    <link rel="dns-prefetch" href="https://securepubads.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com">
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "url": "https://www.img2go.com/",
+            "logo":{
+                "@type":"ImageObject",
+                "url":"https://www.img2go.com/assets/logo/logo_img2go.svg",
+                "width": "248",
+                "height": "72"
+            },
+            "description": "Img2Go - Edit and convert images online. A free web solution for photo editing, image conversion, and more.",
+            "name": "Img2Go",
+            "legalName": "QaamGo Web GmbH",
+            "contactPoint": {
+                "contactType": "customer support",
+                "email": "time2help@img2go.com",
+                "url": "https://www.img2go.com/help"
+            }
+        }
+    </script>
+
+    <title>Img2Go.com - Online photo editor and image converter</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="canonical" href="https://www.img2go.com/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" href="https://www.img2go.com/workspace/canvas/dc39e499c6bd5165" hreflang="x-default" >
+    <link rel="alternate" hreflang="en" href="https://www.img2go.com/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="ar" href="https://www.img2go.com/ar/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="de" href="https://www.img2go.com/de/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="es" href="https://www.img2go.com/es/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="fr" href="https://www.img2go.com/fr/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="pt" href="https://www.img2go.com/pt/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="ru" href="https://www.img2go.com/ru/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="vi" href="https://www.img2go.com/vi/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="hi" href="https://www.img2go.com/hi/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.img2go.com/zh/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="id" href="https://www.img2go.com/id/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="it" href="https://www.img2go.com/it/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="tr" href="https://www.img2go.com/tr/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="fil" href="https://www.img2go.com/fil/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="ms" href="https://www.img2go.com/ms/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="th" href="https://www.img2go.com/th/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="ja" href="https://www.img2go.com/ja/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="ko" href="https://www.img2go.com/ko/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="pl" href="https://www.img2go.com/pl/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="el" href="https://www.img2go.com/el/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="ca" href="https://www.img2go.com/ca/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="ur" href="https://www.img2go.com/ur/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="uk" href="https://www.img2go.com/uk/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="bn" href="https://www.img2go.com/bn/workspace/canvas/dc39e499c6bd5165">
+    <link rel="alternate" hreflang="yo" href="https://www.img2go.com/yo/workspace/canvas/dc39e499c6bd5165">
+
+    <meta property="og:title" content="Img2Go.com - Online photo editor and image converter" >
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="https://www.img2go.com/workspace/canvas/dc39e499c6bd5165" >
+    <meta property="og:site_name" content="Img2Go.com - Online photo editor and image converter" >
+    <meta property="og:description" content="Img2Go - Edit and convert images online. A free web solution for photo editing, image conversion, and more." >
+    <meta property="og:image" content="https://www.img2go.com/assets/social-share-image/en/www-img2go-com.png" >
+    <meta property="og:image:width" content="1200" >
+    <meta property="og:image:height" content="630" >
+    <meta property="og:image:type" content="image/png" >
+    <meta property="og:locale" content="en" >
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://www.img2go.com/workspace/canvas/dc39e499c6bd5165">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="Img2Go.com - Online photo editor and image converter">
+    <meta name="twitter:description" content="Img2Go - Edit and convert images online. A free web solution for photo editing, image conversion, and more.">
+    <meta name="twitter:image:src" content="https://www.img2go.com/assets/social-share-image/en/www-img2go-com.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.img2go.com/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.img2go.com/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.img2go.com/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://www.img2go.com/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://www.img2go.com/assets/favicon/safari-pinned-tab.svg" color="#1976D2">
+    <meta name="msapplication-TileColor" content="#1976D2">
+    <meta name="application-name" content="Img2Go.com">
+    <meta name="msapplication-config" content="https://www.img2go.com/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript">
+    if (sessionStorage.getItem('PLAYWRIGHT') !== 'true') {
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wfma1awfag");
+        
+        function readCookie(name){var eq=name+"=",ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);if(c.indexOf(eq)==0)return decodeURIComponent(c.substring(eq.length,c.length))}return null}
+        function writeCookie(name,value,days){var expires="";if(days){var date=new Date;date.setTime(date.getTime()+(days*24*60*60*1000)),expires="; expires="+date.toUTCString()}document.cookie=name+"="+(value||"")+expires+"; path=/; domain=.img2go.com; Secure; SameSite=Lax"}
+        var vId=readCookie('QGV');vId||(vId=Math.random().toString(16).substr(2,8)+Math.random().toString(16).substr(2,8),writeCookie('QGV',vId,730));
+        var uRole=readCookie('qgrole'),vId2=readCookie('QGV'),uId=readCookie('QGU');
+        uRole&&clarity("set","UserRole",uRole);vId2&&clarity("set","VisitorId",vId2);uId&&clarity("identify",uId);
+    }
+</script>
+
+    <link rel="stylesheet" href="https://www.img2go.com/assets/dist/29834.bbb4c44a.css">
+    <link rel="stylesheet" href="https://www.img2go.com/assets/dist/sat_main.4540cad2.css">
+</head>
+<body class="lang-en ">
+<main>
+<div id="app-creator-studio" data-base-path="/workspace"></div>
+</main>
+
+
+<script>
+window.sat = {
+        enableFreeTrial: false,
+        enableUserModalFlow: true,
+        enableContactUsOsTicket: true,
+        enableVueUploaderFileList: true,
+        enableWeekPass: false,
+        enableRegionalPricing: false,
+        enableCredits: true,
+        enableCreditsInAllSats: true,
+        enableMultipleProducts: true,
+        enableReputationRating: true,
+        enableTeams: false,
+        enableDownloadPassword: false,
+        supportEmailCrypto: 'nbjmup;ujnf3ifmqAjnh3hp/dpn',
+        env: 'prod',
+        project_name: 'Img2Go',
+        statusCode: 200,
+        locale: 'en',
+        userCountry: 'SG',
+        measurementSystem: 'metric',
+        defaultPaperSize: 'a4',
+        defaultUnit: 'mm',
+        pricing: 'https://www.img2go.com/pricing',
+        modal: true,
+        apiUrl: 'https://dragon.img2go.com',
+        mainUrl: 'https://www.img2go.com',
+        accountUrl: 'https://account.img2go.com',
+        privacyUrl: 'https://www.img2go.com/privacy',
+        adTechUrl: 'https://www.img2go.com/ad-provider',
+        googleClientId: '435014379494-monugp6llsrtmk13ttrt3kpvalmb5mfa.apps.googleusercontent.com',
+        disableOneTap: false,
+        loginUrl: 'https://www.img2go.com/login',
+        resultUrl: 'https://www.img2go.com/result',
+        registerUrl: 'https://www.img2go.com/register',
+        termsUrl: 'https://www.img2go.com/terms',
+        imprintUrl: 'https://www.img2go.com/imprint',
+        educationUrl: 'https://www.img2go.com/solution/education',
+        educationClaimUrl: 'https://account.img2go.com/user/claim-educational',
+        educationImageAssetUrl: 'https://www.img2go.com/assets/dist/img/exam.479cc82b.svg',
+        googleIcon: 'https://www.img2go.com/assets/dist/img/google-icon.125eaef7.svg',
+        appleIcon: 'https://www.img2go.com/assets/dist/img/apple-icon.8a8867d6.svg',
+        microsoftIcon: 'https://www.img2go.com/assets/dist/img/microsoft-icon.72f0fcc7.svg',
+        cookieDomain: '.img2go.com',
+        gdpr_download: 'https://www.img2go.com/assets/pdf/img2go_data_processing_agreement.pdf',
+        gdpr_download_de: 'https://www.img2go.com/assets/pdf/img2go_auftragsverarbeitung_vertrag.pdf',
+        baseDomain: 'img2go.com',
+        captchaSiteKey: '0x4AAAAAACGvhIdi2EbrjfdP',
+        gdriveConfig: {
+            clientId: '435014379494-monugp6llsrtmk13ttrt3kpvalmb5mfa.apps.googleusercontent.com',
+            appId: '435014379494',
+            developerKey: 'AIzaSyDyVcmdQedtv2fkgyfbccCAbJr90ZwcGqY',
+            scope: 'https://www.googleapis.com/auth/drive.file',
+            prompt: 'consent',
+            triggerOnepick: true
+        },
+        onedriveConfig: {
+            clientId: '2ce9bc89-27d2-43a0-a023-8e36e9bc3fd6',
+            scope: 'Files.ReadWrite.All'
+        },
+        dropboxKey: 'jdxlu63l5f6d3nq',
+        analytics: {
+            baseDomain: 'img2go.com',
+            cb: 'd712fe6',
+            matomo: {
+                site_id: '15'
+            },
+            google: {
+                ua: 'G-0Q8T23M4GD'
+            }
+        },
+        browserExtension: {
+            chrome: 'https://chrome.google.com/webstore/detail/img2go/kpecfgjcmboghimfnkpcfijmoknhipdi',
+            firefox: 'https://addons.mozilla.org/en-US/firefox/addon/online-image-editor-img2go-com/',
+            edge: ''
+        },
+                useUploaderBoxForLimits: false,
+        pageLogoUrl: 'https://www.img2go.com/assets/logo/logo_img2go.svg',
+        userMenuMobile: [],
+        localePages: [{
+            locale: 'en',
+            url: 'https://www.img2go.com/workspace/canvas/dc39e499c6bd5165',
+            message: 'Switch language to English',
+            btn_yes: 'Yes',
+            btn_no: 'No',
+        },            {
+            locale: 'ar',
+            url: 'https://www.img2go.com/ar/workspace/canvas/dc39e499c6bd5165',
+            message: 'تغيير اللغة إلى العربية',
+            btn_yes: 'نعم',
+            btn_no: 'لا',
+        },            {
+            locale: 'de',
+            url: 'https://www.img2go.com/de/workspace/canvas/dc39e499c6bd5165',
+            message: 'Sprache zu Deutsch wechseln',
+            btn_yes: 'Ja',
+            btn_no: 'Nein',
+        },            {
+            locale: 'es',
+            url: 'https://www.img2go.com/es/workspace/canvas/dc39e499c6bd5165',
+            message: 'Cambiar idioma a Español',
+            btn_yes: 'Sí',
+            btn_no: 'No',
+        },            {
+            locale: 'fr',
+            url: 'https://www.img2go.com/fr/workspace/canvas/dc39e499c6bd5165',
+            message: 'Changer la langue en Français',
+            btn_yes: 'Oui',
+            btn_no: 'Non',
+        },            {
+            locale: 'pt',
+            url: 'https://www.img2go.com/pt/workspace/canvas/dc39e499c6bd5165',
+            message: 'Mudar idioma para Português',
+            btn_yes: 'Sim',
+            btn_no: 'Não',
+        },            {
+            locale: 'ru',
+            url: 'https://www.img2go.com/ru/workspace/canvas/dc39e499c6bd5165',
+            message: 'Сменить язык на Pусский',
+            btn_yes: 'Да',
+            btn_no: 'Нет',
+        },            {
+            locale: 'vi',
+            url: 'https://www.img2go.com/vi/workspace/canvas/dc39e499c6bd5165',
+            message: 'Chuyển ngôn ngữ sang Tiếng Việt',
+            btn_yes: 'Có',
+            btn_no: 'Không',
+        },            {
+            locale: 'hi',
+            url: 'https://www.img2go.com/hi/workspace/canvas/dc39e499c6bd5165',
+            message: 'हिन्दी भाषा में बदलें',
+            btn_yes: 'हाँ',
+            btn_no: 'नहीं',
+        },            {
+            locale: 'zh',
+            url: 'https://www.img2go.com/zh/workspace/canvas/dc39e499c6bd5165',
+            message: '切换语言为 中文 (简体)',
+            btn_yes: '是',
+            btn_no: '否',
+        },            {
+            locale: 'id',
+            url: 'https://www.img2go.com/id/workspace/canvas/dc39e499c6bd5165',
+            message: 'Ganti bahasa ke Bahasa Indonesia',
+            btn_yes: 'Ya',
+            btn_no: 'Tidak',
+        },            {
+            locale: 'it',
+            url: 'https://www.img2go.com/it/workspace/canvas/dc39e499c6bd5165',
+            message: 'Passa alla lingua Italiano',
+            btn_yes: 'Sì',
+            btn_no: 'No',
+        },            {
+            locale: 'tr',
+            url: 'https://www.img2go.com/tr/workspace/canvas/dc39e499c6bd5165',
+            message: 'Dili Türkçe olarak değiştir',
+            btn_yes: 'Evet',
+            btn_no: 'Hayır',
+        },            {
+            locale: 'fil',
+            url: 'https://www.img2go.com/fil/workspace/canvas/dc39e499c6bd5165',
+            message: 'Palitan ang wika sa Filipino',
+            btn_yes: 'Oo',
+            btn_no: 'Hindi',
+        },            {
+            locale: 'ms',
+            url: 'https://www.img2go.com/ms/workspace/canvas/dc39e499c6bd5165',
+            message: 'Tukar bahasa ke Bahasa Melayu',
+            btn_yes: 'Ya',
+            btn_no: 'Tidak',
+        },            {
+            locale: 'th',
+            url: 'https://www.img2go.com/th/workspace/canvas/dc39e499c6bd5165',
+            message: 'เปลี่ยนภาษาเป็น ไทย',
+            btn_yes: 'ใช่',
+            btn_no: 'ไม่ใช่',
+        },            {
+            locale: 'ja',
+            url: 'https://www.img2go.com/ja/workspace/canvas/dc39e499c6bd5165',
+            message: '言語を日本語に切り替える',
+            btn_yes: 'はい',
+            btn_no: 'いいえ',
+        },            {
+            locale: 'ko',
+            url: 'https://www.img2go.com/ko/workspace/canvas/dc39e499c6bd5165',
+            message: '한국어 언어로 전환',
+            btn_yes: '예',
+            btn_no: '아니요',
+        },            {
+            locale: 'pl',
+            url: 'https://www.img2go.com/pl/workspace/canvas/dc39e499c6bd5165',
+            message: 'Zmień język na Polski',
+            btn_yes: 'Tak',
+            btn_no: 'Nie',
+        },            {
+            locale: 'el',
+            url: 'https://www.img2go.com/el/workspace/canvas/dc39e499c6bd5165',
+            message: 'Αλλαγή γλώσσας σε Ελληνικά',
+            btn_yes: 'Ναι',
+            btn_no: 'Όχι',
+        },            {
+            locale: 'ca',
+            url: 'https://www.img2go.com/ca/workspace/canvas/dc39e499c6bd5165',
+            message: 'Canvia l&#039;idioma a Català',
+            btn_yes: 'Sí',
+            btn_no: 'No',
+        },            {
+            locale: 'ur',
+            url: 'https://www.img2go.com/ur/workspace/canvas/dc39e499c6bd5165',
+            message: 'زبان کو اردو میں تبدیل کریں',
+            btn_yes: 'ہاں',
+            btn_no: 'نہیں',
+        },            {
+            locale: 'uk',
+            url: 'https://www.img2go.com/uk/workspace/canvas/dc39e499c6bd5165',
+            message: 'Змінити мову на Українська',
+            btn_yes: 'Так',
+            btn_no: 'Ні',
+        },            {
+            locale: 'bn',
+            url: 'https://www.img2go.com/bn/workspace/canvas/dc39e499c6bd5165',
+            message: 'বাংলা ভাষায় পরিবর্তন করুন',
+            btn_yes: 'হ্যাঁ',
+            btn_no: 'না',
+        },            {
+            locale: 'yo',
+            url: 'https://www.img2go.com/yo/workspace/canvas/dc39e499c6bd5165',
+            message: 'Yi èdè sí Yorùbá',
+            btn_yes: 'Bẹẹni',
+            btn_no: 'Rárá',
+        }                    ],
+        register_success: 'https://account.img2go.com/register-success',
+        subscribe_success: 'https://account.img2go.com/subscribe-success',
+        subscribe: 'https://dragon.img2go.com/api/tpl/subscribe',
+        stripe_pk: 'pk_live_HslXQu5owMEQH5cT7ksEaVfL00l8506qm6',
+        registerResend: 'https://dragon.img2go.com/api/register-resend',
+        user_dashboard: 'https://account.img2go.com/user/dashboard',
+        helpUrl: 'https://www.img2go.com/help',
+        sdsn: 'https://c3b0163eb52e0ca91cb10f65305f1040@firefly.img2go.com/10',
+        senv: 'prod_web6'
+    };
+
+            try {
+            window.sat.trustLogos = JSON.parse('\u005B\u007B\u0022img\u0022\u003A\u0022https\u003A\\\/\\\/www.img2go.com\\\/assets\\\/dist\\\/img\\\/trust_logos\\\/samsung1_logo_gray_dark.b9e4a551.svg\u0022,\u0022name\u0022\u003A\u0022Samsung\u0022,\u0022scale\u0022\u003A2\u007D,\u007B\u0022img\u0022\u003A\u0022https\u003A\\\/\\\/www.img2go.com\\\/assets\\\/dist\\\/img\\\/trust_logos\\\/amazon_logo_gray_dark.b6b96b04.svg\u0022,\u0022name\u0022\u003A\u0022Amazon\u0022,\u0022scale\u0022\u003A3\u007D,\u007B\u0022img\u0022\u003A\u0022https\u003A\\\/\\\/www.img2go.com\\\/assets\\\/dist\\\/img\\\/trust_logos\\\/walmart_logo_gray_dark.fd713fe6.svg\u0022,\u0022name\u0022\u003A\u0022Walmart\u0022,\u0022scale\u0022\u003A2.5\u007D,\u007B\u0022img\u0022\u003A\u0022https\u003A\\\/\\\/www.img2go.com\\\/assets\\\/dist\\\/img\\\/trust_logos\\\/ebay_logo_gray_dark.e66d327c.svg\u0022,\u0022name\u0022\u003A\u0022Ebay\u0022,\u0022scale\u0022\u003A2.5\u007D,\u007B\u0022img\u0022\u003A\u0022https\u003A\\\/\\\/www.img2go.com\\\/assets\\\/dist\\\/img\\\/trust_logos\\\/yale_logo_gray_dark.448e633d.svg\u0022,\u0022name\u0022\u003A\u0022Yale\u0020University\u0022,\u0022scale\u0022\u003A2.5\u007D\u005D');
+        } catch (e) {}
+    
+            try {
+            window.sat.featuresWithCredits = JSON.parse('\u007B\u0022aicreatorstudio\u0022\u003A\u0022AI\u0020Creator\u0020Studio\u0022,\u0022airemovebackground\u0022\u003A\u0022Remove\u0020Background\u0022,\u0022aiartgenerator\u0022\u003A\u0022AI\u0020Art\u0020Generator\u0022,\u0022aiupscaleimage\u0022\u003A\u0022Upscale\u0020Image\u0022,\u0022airestoreimage\u0022\u003A\u0022Image\u0020Restoration\u0022,\u0022aiblurfaces\u0022\u003A\u0022Blur\u0020Faces\u0022,\u0022aisimilarimage\u0022\u003A\u0022Create\u0020Similar\u0020Image\u0022,\u0022colorizeimage\u0022\u003A\u0022Colorize\u0020Image\u0022\u007D');
+        } catch (e) {}
+    
+    
+    window.sat.toolsUrl = 'https://www.img2go.com/';
+
+    
+            window.sat.ratingCapterraUrl = 'https://reviews.capterra.com/products/new/2b5d869c-6bb9-47a8-90d3-ce28e49432af/';
+        window.sat.ratingG2Url = 'https://www.g2.com/products/img2go/take_survey';
+        window.sat.ratingGoogleUrl = 'https://g.page/r/CbNhm2c_RO5fEBM/review';
+    </script>
+
+<script>
+!function(w,d){'use strict';if(!w.Analytics){var q=[],s=function(){q.push(arguments)};w.Analytics={trackEvent:s,_queue:q}}function g(n){var m=d.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?decodeURIComponent(m[2]):null}function sc(n,v,ds){var e=new Date();e.setTime(e.getTime()+(ds||720)*864e5);d.cookie=n+'='+encodeURIComponent(v)+'; expires='+e.toUTCString()+'; path=/; domain=..img2go.com; SameSite=Lax'}function gv(){if(w.__QGV_FROM_EDGE__){var v=w.__QGV_FROM_EDGE__;sc('QGV',v,720);delete w.__QGV_FROM_EDGE__;return v}var v=g('QGV');if(!v){v=Math.random().toString(16).substr(2,8)+Math.random().toString(16).substr(2,8);sc('QGV',v,720)}return v}function gu(){return g('QGU')}function sr(u,dt){var b=JSON.stringify(dt);if(navigator&&navigator.sendBeacon){try{var bl=new Blob([b],{type:'application/json'});if(navigator.sendBeacon(u,bl))return}catch(e){}}if(w.fetch){return fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:b,keepalive:true}).catch(function(er){if(w.console&&console.warn)console.warn('Analytics fetch failed',er)})}else if(w.XMLHttpRequest){try{var x=new XMLHttpRequest();x.open('POST',u,true);x.setRequestHeader('Content-Type','application/json');x.send(b)}catch(e){if(w.console&&console.warn)console.warn('Analytics XHR failed',e)}}}var A={trackEvent:function(en,pr,tg){pr=pr||{};tg=tg||[];var pl={t:new Date().toISOString(),e:en,v:gv(),u:gu(),l:w.location.href,p:w.location.pathname,r:d.referrer||'',a:navigator.userAgent,sw:w.screen.width,sh:w.screen.height,vw:w.innerWidth,vh:w.innerHeight,lg:navigator.language||'',tz:new Date().getTimezoneOffset(),pr:pr,tg:tg};if(sessionStorage.getItem('PLAYWRIGHT')==='true'){if(w.console&&console.log){console.log('[BAT Analytics] Skipped (Playwright mode):',en);console.log('[BAT Analytics] Tracking:',pl)}return}sr('https://dragon.img2go.com/api/bat',pl)}};var oq=w.Analytics._queue||[];w.Analytics=A;if(oq&&oq.length){oq.forEach(function(ag){A.trackEvent.apply(A,ag)})}function tp(){var pr={};if(w.pageConfig&&w.pageConfig.operation){pr.operation=w.pageConfig.operation}A.trackEvent('page_view',pr)}if(d.readyState==='complete'){tp()}else{w.addEventListener('load',tp)}w.addEventListener('popstate',tp);w.addEventListener('hashchange',tp);!function(){function gs(el){if(!el||el===d.documentElement||el===d.body)return el?el.tagName.toLowerCase():'';var t=el.tagName.toLowerCase();if(el.id)return t+'#'+el.id;var cl=Array.prototype.slice.call(el.classList).filter(function(c){return!/^(hover|focus|active|tw-|:)/.test(c)}).slice(0,2).join('.');var s=cl?t+'.'+cl:t;var p=el.parentElement;if(p&&p!==d.body&&p!==d.documentElement){var pt=p.tagName.toLowerCase();if(p.id)return pt+'#'+p.id+' > '+s;var pc=Array.prototype.slice.call(p.classList).filter(function(c){return!/^(hover|focus|active|tw-|:)/.test(c)}).slice(0,1).join('.');if(pc)return pt+'.'+pc+' > '+s;return pt+' > '+s}return s}var c=[],MT=1e3,MD=50,RC=3;d.addEventListener('click',function(e){var n=Date.now();c.push({x:e.clientX,y:e.clientY,time:n,target:e.target});c=c.filter(function(ck){return n-ck.time<MT});if(c.length>=RC){var bs=c[0];var ac=c.every(function(ck){return Math.abs(ck.x-bs.x)<MD&&Math.abs(ck.y-bs.y)<MD});if(ac){var sl='';try{sl=gs(e.target)}catch(ex){}A.trackEvent('rage_click',{x:bs.x,y:bs.y,count:c.length,path:w.location.pathname,selector:sl});c=[]}}})}();!function(){var ms=0,ls=0;function gsd(){var st=w.pageYOffset||d.documentElement.scrollTop||d.body.scrollTop||0;var dh=Math.max(d.body.scrollHeight,d.documentElement.scrollHeight,d.body.offsetHeight,d.documentElement.offsetHeight,d.body.clientHeight,d.documentElement.clientHeight)-w.innerHeight;if(dh<=0)return 100;return Math.round((st/dh)*100)}function os(){var dp=gsd();if(dp>ms)ms=dp;if(ms>=ls+25){ls=Math.floor(ms/25)*25;A.trackEvent('scroll_depth',{depth:ls,path:w.location.pathname},['engagement'])}}w.addEventListener('scroll',os,{passive:true})}()}(window,document);
+</script>
+<script>
+    if (sessionStorage.getItem('PLAYWRIGHT') !== 'true') {
+        var _paq = _paq || [];
+        _paq.push(["setCookieDomain", "*.img2go.com"]);
+        _paq.push(["setDomains", ["*.img2go.com"]]);
+
+        function readCk(n){var eq=n+"=",ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1);if(c.indexOf(eq)==0)return decodeURIComponent(c.substring(eq.length))}return null}
+        function writeCk(n,v,d){var e="";if(d){var dt=new Date;dt.setTime(dt.getTime()+(d*24*60*60*1000));e="; expires="+dt.toUTCString()}document.cookie=n+"="+(v||"")+e+"; path=/; domain=.img2go.com; Secure; SameSite=Lax"}
+
+        var userRole = readCk('qgrole');
+        if (userRole) {
+            _paq.push(['setCustomDimension', 1, userRole]);
+        }
+
+        var visitorId;
+        if (window.__QGV_FROM_EDGE__) {
+            visitorId = window.__QGV_FROM_EDGE__;
+            writeCk('QGV', visitorId, 730);
+            delete window.__QGV_FROM_EDGE__;
+        } else {
+            visitorId = readCk('QGV');
+            if (!visitorId) {
+                visitorId = Math.random().toString(16).substr(2, 8) + Math.random().toString(16).substr(2, 8);
+                writeCk('QGV', visitorId, 730);
+            }
+        }
+        _paq.push(['setVisitorId', visitorId]);
+
+        var loggedInUser = readCk('QGU');
+        if (loggedInUser) {
+            _paq.push(['setUserId', loggedInUser]);
+        }
+
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        _paq.push(['setSecureCookie', true]);
+        (function() {
+            var u="//stats.img2go.com/piwik/";
+            var v="//stats.img2go.com/piwik/matomo-d712fe6.js";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '15']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=v; s.parentNode.insertBefore(g,s);
+        })();
+    }
+</script>
+<noscript><p><img src="//stats.img2go.com/piwik/piwik.php?idsite=15&amp;rec=1" style="border:0;" alt="Piwik" ></p></noscript>
+<script>
+    var gaProperty = 'G-0Q8T23M4GD';
+    var disableStr = 'ga-disable-' + gaProperty;
+
+    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+        window[disableStr] = true;
+    }
+
+    var cookieDomain = location.hostname.split('.').reverse()[1] + '.' + location.hostname.split('.').reverse()[0];
+
+    function gaOptout() {
+        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; domain=.' + cookieDomain + '; path=/';
+        window[disableStr] = true;
+    }
+</script>
+
+<script>
+    if (sessionStorage.getItem('PLAYWRIGHT') !== 'true') {
+        function readCk(n){var eq=n+"=",ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1);if(c.indexOf(eq)==0)return decodeURIComponent(c.substring(eq.length))}return null}
+
+        [
+            'https://www.googletagmanager.com/gtag/js?id=G-0Q8T23M4GD',
+        ].forEach(function(src) {
+            var script = document.createElement('script');
+            script.src = src;
+            script.async = true;
+            document.head.appendChild(script);
+        });
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        var loggedInUser = readCk('QGU');
+
+        var gtag_config = {
+            'anonymize_ip': true,
+            'cookie_domain': '.img2go.com'
+        };
+
+        if (loggedInUser) {
+            gtag_config.user_id = loggedInUser;
+        }
+
+        gtag('config', 'G-0Q8T23M4GD', gtag_config);
+    }
+</script>
+
+<script src="https://www.img2go.com/assets/dist/runtime.170e3fe7.js" defer></script><script src="https://www.img2go.com/assets/dist/sat_user.b07fc751.js" defer></script>
+<script src="https://www.img2go.com/assets/dist/53110.fafd4cdd.js" defer></script><script src="https://www.img2go.com/assets/dist/75597.db121cba.js" defer></script><script src="https://www.img2go.com/assets/dist/47199.e3a897e8.js" defer></script><script src="https://www.img2go.com/assets/dist/29379.efc89c24.js" defer></script><script src="https://www.img2go.com/assets/dist/89968.e7b6cc5b.js" defer></script><script src="https://www.img2go.com/assets/dist/sat_nav.49c8a64e.js" defer></script>
+<script src="https://www.img2go.com/assets/dist/6352.d552ed95.js" defer></script><script src="https://www.img2go.com/assets/dist/sat_main.4538de24.js" defer></script>
+<script src="https://www.img2go.com/assets/dist/53751.514b67aa.js" defer></script><script src="https://www.img2go.com/assets/dist/91100.71150515.js" defer></script><script src="https://www.img2go.com/assets/dist/97346.5dd65911.js" defer></script><script src="https://www.img2go.com/assets/dist/31976.fa391d50.js" defer></script><script src="https://www.img2go.com/assets/dist/34670.c65aa341.js" defer></script><script src="https://www.img2go.com/assets/dist/68941.626ce5dd.js" defer></script><script src="https://www.img2go.com/assets/dist/48896.d3c29be2.js" defer></script><script src="https://www.img2go.com/assets/dist/11371.87124ca0.js" defer></script><script src="https://www.img2go.com/assets/dist/29441.c2a377bd.js" defer></script><script src="https://www.img2go.com/assets/dist/15505.b626b74d.js" defer></script><script src="https://www.img2go.com/assets/dist/89173.f5e3163d.js" defer></script><script src="https://www.img2go.com/assets/dist/32375.f2d1377c.js" defer></script><script src="https://www.img2go.com/assets/dist/58175.5195c007.js" defer></script><script src="https://www.img2go.com/assets/dist/67918.9baa8f09.js" defer></script><script src="https://www.img2go.com/assets/dist/75942.df071657.js" defer></script><script src="https://www.img2go.com/assets/dist/37886.cce4d34a.js" defer></script><script src="https://www.img2go.com/assets/dist/58815.d9606d33.js" defer></script><script src="https://www.img2go.com/assets/dist/29215.241765f1.js" defer></script><script src="https://www.img2go.com/assets/dist/13271.03aed707.js" defer></script><script src="https://www.img2go.com/assets/dist/workspace_img2go.32045345.js" defer></script>
+</body>
+</html>

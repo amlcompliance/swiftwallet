@@ -1,0 +1,43 @@
+{
+  "name": "swiftwallet",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.0",
+    "bcryptjs": "^2.4.0",
+    "next": "14.2.15",
+    "next-auth": "^4.0.0",
+    "prisma": "^5.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stripe": "^22.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.1",
+    "@types/react": "19.2.17",
+    "typescript": "7.0.2"
+  },
+  "description": "This workspace now contains a database-backed wallet platform built with Next.js, Prisma, SQLite, and NextAuth.",
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denshits1996-art/swiftwallet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/denshits1996-art/swiftwallet/issues"
+  },
+  "homepage": "https://github.com/denshits1996-art/swiftwallet#readme"
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SwiftWallet Transactions</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin:0; background:#f7f9fc; color:#14213d; }
+      nav { background:#0f172a; color:#fff; padding:16px 24px; }
+      .container { padding:24px; }
+      .card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.06); }
+      table { width:100%; border-collapse:collapse; }
+      th, td { text-align:left; padding:10px; border-bottom:1px solid #e5e7eb; }
+      .actions button { background:#0b6cff; color:#fff; border:none; padding:8px 12px; border-radius:8px; margin-right:8px; }
+    </style>
+  </head>
+  <body>
+    <nav><strong>SwiftWallet</strong> Transactions</nav>
+    <div class="container">
+      <div class="card">
+        <div class="actions">
+          <button>Export CSV</button>
+          <button>New Collection</button>
+          <button>New Disbursement</button>
+        </div>
+        <h2>Transaction History</h2>
+        <table>
+          <tr><th>ID</th><th>Type</th><th>Amount</th><th>Status</th><th>Date</th></tr>
+          <% transactions.forEach((tx) => { %>
+            <tr>
+              <td><%= tx.id %></td>
+              <td><%= tx.type %></td>
+              <td>PHP <%= tx.amount.toLocaleString() %></td>
+              <td><%= tx.status %></td>
+              <td><%= tx.date %></td>
+            </tr>
+          <% }) %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
