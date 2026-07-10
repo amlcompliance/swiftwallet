@@ -8,29 +8,107 @@ datasource db {
 }
 
 model User {
-  id            Int      @id @default(autoincrement())
-  name          String
-  email         String   @unique
-  passwordHash  String
-  role          String   @default("MERCHANT")
-  createdAt     DateTime @default(now())
-  profileImage  String?
-  balance       Float    @default(0)
-  transactions  Transaction[]
+  id              Int      @id @default(autoincrement())
+  name            String
+  email           String   @unique
+  passwordHash    String
+  role            String   @default("MERCHANT")
+  createdAt       DateTime @default(now())
+  profileImage    String?
+  balance         Float    @default(0)
+  transactions    Transaction[]
+  apiKeys         ApiKey[]
+  webhookConfigs  WebhookConfig[]
+  apiUsages       ApiUsage[]
 }
 
 model Transaction {
-  id            Int      @id @default(autoincrement())
-  userId        Int
-  type          String
-  amount        Float
-  currency      String   @default("PHP")
-  status        String   @default("PENDING")
-  provider      String   @default("SWIFTPAY")
-  reference     String   @unique
-  externalId    String?
-  rawPayload    String?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  user          User     @relation(fields: [userId], references: [id])
+  id              Int      @id @default(autoincrement())
+  userId          Int
+  type            String
+  amount          Float
+  currency        String   @default("PHP")
+  status          String   @default("PENDING")
+  provider        String   @default("SWIFTPAY")
+  reference       String   @unique
+  externalId      String?
+  rawPayload      String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  user            User     @relation(fields: [userId], references: [id])
+}
+
+model ApiKey {
+  id              String   @id @default(cuid())
+  userId          Int
+  key             String   @unique
+  keyHash         String   @unique
+  mode            String   @default("sandbox")  // sandbox or live
+  name            String
+  isActive        Boolean  @default(true)
+  lastUsedAt      DateTime?
+  createdAt       DateTime @default(now())
+  expiresAt       DateTime?
+  rateLimit       Int      @default(100)        // requests per minute
+  ipWhitelists    IpWhitelist[]
+  webhookConfigs  WebhookConfig[]
+  apiUsages       ApiUsage[]
+  user            User     @relation(fields: [userId], references: [id])
+}
+
+model IpWhitelist {
+  id              String   @id @default(cuid())
+  apiKeyId        String
+  ipAddress       String
+  description     String?
+  createdAt       DateTime @default(now())
+  apiKey          ApiKey   @relation(fields: [apiKeyId], references: [id], onDelete: Cascade)
+  
+  @@unique([apiKeyId, ipAddress])
+}
+
+model WebhookConfig {
+  id              String   @id @default(cuid())
+  userId          Int
+  apiKeyId        String
+  url             String
+  events          String   @default("payment.completed,payment.failed")
+  isActive        Boolean  @default(true)
+  secret          String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  deliveries      WebhookDelivery[]
+  user            User     @relation(fields: [userId], references: [id])
+  apiKey          ApiKey   @relation(fields: [apiKeyId], references: [id], onDelete: Cascade)
+}
+
+model WebhookDelivery {
+  id              String   @id @default(cuid())
+  webhookConfigId String
+  event           String
+  payload         String
+  statusCode      Int?
+  responseBody    String?
+  attempts        Int      @default(0)
+  maxAttempts     Int      @default(3)
+  nextRetryAt     DateTime?
+  succeededAt     DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  webhookConfig   WebhookConfig @relation(fields: [webhookConfigId], references: [id], onDelete: Cascade)
+}
+
+model ApiUsage {
+  id              String   @id @default(cuid())
+  userId          Int
+  apiKeyId        String
+  endpoint        String
+  method          String
+  statusCode      Int
+  responseTime    Int      // milliseconds
+  ipAddress       String
+  userAgent       String?
+  createdAt       DateTime @default(now())
+  user            User     @relation(fields: [userId], references: [id])
+  apiKey          ApiKey   @relation(fields: [apiKeyId], references: [id])
 }

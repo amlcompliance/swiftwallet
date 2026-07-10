@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '../../auth/[...nextauth]/route';
+import { authOptions } from '../../../../lib/auth';
 import { prisma } from '../../../../lib/prisma';
-const { createCollection } = require('../../../../lib/swiftpay');
+import { createCollection } from '../../../../lib/swiftpay';
 
 function normalizeStatus(status: string | undefined) {
   const mapped = (status || '').toUpperCase();
